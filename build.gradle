@@ -22,14 +22,14 @@ bootJar {
 
 repositories {
     mavenCentral()
-    url 'https://repo.spring.io/libs-milestone'
+   // url 'https://repo.spring.io/libs-milestone'
 }
 
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
 dependencies {
-	compile 'org.springframework.data:spring-data-jdbc:1.0.0.RC2'
+	compile 'org.springframework.data:spring-data-jdbc'
     compile("org.springframework.boot:spring-boot-starter-web")
     testCompile("junit:junit")
 }
