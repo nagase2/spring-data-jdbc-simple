@@ -6,7 +6,7 @@ import org.springframework.data.annotation.Id;
 
 public class Customer {
     @Id
-    Long id;
-    String firstName;
-    LocalDate dob;
+    public Long id;
+    public String firstName;
+    public LocalDate dob;
 }
