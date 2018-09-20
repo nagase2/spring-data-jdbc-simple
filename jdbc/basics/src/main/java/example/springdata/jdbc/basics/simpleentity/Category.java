@@ -15,11 +15,6 @@
  */
 package example.springdata.jdbc.basics.simpleentity;
 
-import java.time.LocalDateTime;
-
-import org.springframework.data.annotation.Id;
-import org.springframework.data.annotation.PersistenceConstructor;
-
 import example.springdata.jdbc.basics.aggregate.AgeGroup;
 import example.springdata.jdbc.basics.aggregate.LegoSet;
 import lombok.AccessLevel;
@@ -27,6 +22,11 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.Setter;
 import lombok.experimental.Wither;
+
+import java.time.LocalDateTime;
+
+import org.springframework.data.annotation.Id;
+import org.springframework.data.annotation.PersistenceConstructor;
 
 /**
  * Coarse classification for {@link LegoSet}s, like "Car", "Plane", "Building" and so on.

@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Implementation-Title: Spring Data JDBC - Basic usage examples
+Implementation-Version: 2.0.0.BUILD-SNAPSHOT
+Built-By: nagase
+Implementation-Vendor-Id: org.springframework.data.examples
+Build-Jdk: 1.8.0_45
+Implementation-URL: http://projects.spring.io/spring-data-jdbc/spring-
+ data-jdbc-basics
+Created-By: Maven Integration for Eclipse
+

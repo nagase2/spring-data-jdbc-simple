@@ -1,0 +1,53 @@
+buildscript {
+	repositories{
+		mavenCentral()
+	}
+	dependencies {
+	  classpath "io.spring.gradle:dependency-management-plugin:0.4.0.RELEASE"
+		 classpath("org.springframework.boot:spring-boot-gradle-plugin:2.0.5.RELEASE")
+	}
+}
+  
+  apply plugin: "io.spring.dependency-management"
+  apply plugin: 'java'
+apply plugin: 'eclipse'
+// apply plugin: 'idea'
+apply plugin: 'org.springframework.boot'
+
+
+bootJar {
+    baseName = 'gs-spring-boot'
+    version =  '0.1.0'
+}
+
+
+  dependencyManagement {
+	imports {
+	  mavenBom 'org.springframework.data:spring-data-releasetrain:Lovelace-BUILD-SNAPSHOT'
+	}
+  }
+  
+  dependencies {
+	  compile 'org.springframework.data:spring-data-jdbc'
+	  //compile 'org.springframework.data:spring-data-rest'
+		  //  compile 'org.springframework.data:spring-data-jdbc:1.0.0.BUILD-SNAPSHOT'
+    def lombokVersion = '1.16.12'
+   // lombok
+    compile "org.projectlombok:lombok:$lombokVersion"
+  
+    compile("org.springframework.boot:spring-boot-starter-web")
+    testCompile "org.springframework.boot:spring-boot-starter-test"
+    compile("junit:junit")
+    // https://mvnrepository.com/artifact/org.hsqldb/hsqldb
+    testCompile group: 'org.hsqldb', name: 'hsqldb', version: '2.4.0'
+  }
+	repositories {	
+	  maven {
+		  url 'https://repo.spring.io/libs-snapshot'
+	  }
+		    mavenLocal()
+    jcenter()
+    maven { url 'http://repo.spring.io/plugins-release' }
+    maven { url 'https://repository.jboss.org/nexus/content/groups/public/' }
+    maven { url 'https://plugins.gradle.org/m2/' }
+  }

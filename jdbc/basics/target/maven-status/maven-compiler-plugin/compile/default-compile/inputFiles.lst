@@ -1,0 +1,10 @@
+/Users/nagase/git-repository/spring-data-examples/jdbc/basics/src/main/java/example/springdata/jdbc/basics/aggregate/Model.java
+/Users/nagase/git-repository/spring-data-examples/jdbc/basics/src/main/java/example/springdata/jdbc/basics/aggregate/ModelReport.java
+/Users/nagase/git-repository/spring-data-examples/jdbc/basics/src/main/java/example/springdata/jdbc/basics/aggregate/LegoSetRepository.java
+/Users/nagase/git-repository/spring-data-examples/jdbc/basics/src/main/java/example/springdata/jdbc/basics/simpleentity/CategoryConfiguration.java
+/Users/nagase/git-repository/spring-data-examples/jdbc/basics/src/main/java/example/springdata/jdbc/basics/aggregate/AggregateConfiguration.java
+/Users/nagase/git-repository/spring-data-examples/jdbc/basics/src/main/java/example/springdata/jdbc/basics/aggregate/Manual.java
+/Users/nagase/git-repository/spring-data-examples/jdbc/basics/src/main/java/example/springdata/jdbc/basics/simpleentity/CategoryRepository.java
+/Users/nagase/git-repository/spring-data-examples/jdbc/basics/src/main/java/example/springdata/jdbc/basics/aggregate/AgeGroup.java
+/Users/nagase/git-repository/spring-data-examples/jdbc/basics/src/main/java/example/springdata/jdbc/basics/simpleentity/Category.java
+/Users/nagase/git-repository/spring-data-examples/jdbc/basics/src/main/java/example/springdata/jdbc/basics/aggregate/LegoSet.java

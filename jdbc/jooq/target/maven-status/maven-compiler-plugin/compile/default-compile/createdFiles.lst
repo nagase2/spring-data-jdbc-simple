@@ -1,0 +1,17 @@
+example/springdata/jdbc/basics/simpleentity/domain/DefaultCatalog.class
+example/springdata/jdbc/jooq/JooqRepository.class
+example/springdata/jdbc/jooq/CategoryConfiguration.class
+example/springdata/jdbc/jooq/JooqRepositoryImpl.class
+example/springdata/jdbc/jooq/CategoryRepository.class
+example/springdata/jdbc/jooq/Output.class
+example/springdata/jdbc/basics/simpleentity/domain/Indexes.class
+example/springdata/jdbc/basics/simpleentity/domain/Keys$UniqueKeys0.class
+example/springdata/jdbc/basics/simpleentity/domain/Keys.class
+example/springdata/jdbc/basics/simpleentity/domain/tables/Category.class
+example/springdata/jdbc/basics/simpleentity/domain/Tables.class
+example/springdata/jdbc/jooq/Category.class
+example/springdata/jdbc/basics/simpleentity/domain/Keys$Identities0.class
+example/springdata/jdbc/jooq/AgeGroup.class
+example/springdata/jdbc/basics/simpleentity/domain/tables/records/CategoryRecord.class
+example/springdata/jdbc/basics/simpleentity/domain/Indexes$Indexes0.class
+example/springdata/jdbc/basics/simpleentity/domain/Public.class
