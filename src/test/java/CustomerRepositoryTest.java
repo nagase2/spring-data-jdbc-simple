@@ -1,7 +1,5 @@
 
 
-import static org.assertj.core.api.Assertions.*;
-
 import java.time.LocalDate;
 import java.util.Optional;
 
@@ -12,9 +10,9 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.transaction.annotation.Transactional;
 
+import hello.Customer;
 import hello.CustomerConfig;
 import hello.CustomerRepository;
-import hello.entity.Customer;
 
 
 
@@ -53,15 +51,15 @@ public class CustomerRepositoryTest {
     
     @Test
     public void findByName() {
-
+        System.out.println("開始");
         Customer customer = new Customer();
         customer.dob = LocalDate.of(1904, 5, 14);
         customer.firstName = "Albert";
-
+        System.out.println("開始１");
         Customer saved = customerRepo.save(customer);
 
        // assertThat(saved.id).isNotNull();
-
+        System.out.println("開始２");
         customer.id= null; 
         customer.firstName = "Bertram";
 
