@@ -4,7 +4,7 @@ CREATE TABLE IF NOT EXISTS Lego_Set (id INTEGER, name VARCHAR(100), min_Age INTE
 CREATE TABLE IF NOT EXISTS Handbuch (handbuch_id INTEGER, author CHAR(100), text CLOB);
 CREATE TABLE IF NOT EXISTS Model (name VARCHAR(100), description CLOB, lego_set INTEGER);
 
-CREATE TABLE IF NOT EXISTS customer (id NUMERIC, firstName VARCHAR(200), dob DATETIME);
+CREATE TABLE IF NOT EXISTS customer (id NUMERIC, first_name VARCHAR(200), dob date ,CONSTRAINT my_primary PRIMARY KEY (id));
 
 
 	
