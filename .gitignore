@@ -28,3 +28,7 @@ bin
 bin/
 upoad-dir
 logs/*.log.tar.gz
+/classes/
+target
+/target
+.class

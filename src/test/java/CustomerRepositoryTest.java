@@ -6,6 +6,7 @@ import java.util.Optional;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureJdbc;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.transaction.annotation.Transactional;
@@ -17,9 +18,10 @@ import hello.CustomerRepository;
 
 
 
+
 @RunWith(SpringRunner.class)
-@Transactional
 @ContextConfiguration(classes = CustomerConfig.class)
+@AutoConfigureJdbc
 public class CustomerRepositoryTest {
 
     @Autowired CustomerRepository customerRepo;
@@ -51,25 +53,8 @@ public class CustomerRepositoryTest {
     
     @Test
     public void findByName() {
-        System.out.println("開始");
-        Customer customer = new Customer();
-        customer.dob = LocalDate.of(1904, 5, 14);
-        customer.firstName = "Albert";
-        System.out.println("開始１");
-        Customer saved = customerRepo.save(customer);
+        
+        System.out.println(customerRepo.findAll());
 
-       // assertThat(saved.id).isNotNull();
-        System.out.println("開始２");
-        customer.id= null; 
-        customer.firstName = "Bertram";
-
-        customerRepo.save(customer);
-
-        customer.id= null;
-        customer.firstName = "Beth";
-
-        customerRepo.save(customer);
-
-       // assertThat(customerRepo.findByName("bert")).hasSize(2);
     }
 }

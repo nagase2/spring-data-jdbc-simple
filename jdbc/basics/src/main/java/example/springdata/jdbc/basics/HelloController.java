@@ -1,4 +1,4 @@
-package hello;
+package example.springdata.jdbc.basics;
 
 import java.util.Optional;
 import java.util.Random;
@@ -11,17 +11,17 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class HelloController {
     
-    @Autowired
-    CustomerRepository customerRepo;
+//    @Autowired
+//    CustomerRepository customerRepo;
     
     Random rnd = new Random();
     
     @RequestMapping("/")
     public String index() {
         
-        System.out.println(customerRepo.findAll());
-        
-        System.out.println(customerRepo.findByName("na"));
+//        System.out.println(customerRepo.findAll());
+//        
+//        System.out.println(customerRepo.findByName("na"));
         
         return "Greetings from Spring Boot!!!S";
     }
@@ -29,9 +29,9 @@ public class HelloController {
     @RequestMapping("/save")
     public String save() {
         System.out.println("--------save-----------");
-        Optional<Customer> update = customerRepo.findById((long) 1);
-        
-        customerRepo.save(update.get());
+//        Optional<Customer> update = customerRepo.findById((long) 1);
+//        
+//        customerRepo.save(update.get());
 //        Customer cust = new Customer();
 //        cust.setId((long) 444);
 //        cust.setFirstName("テストユーザ!");
