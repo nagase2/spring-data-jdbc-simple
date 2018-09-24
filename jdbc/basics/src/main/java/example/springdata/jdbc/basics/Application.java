@@ -20,17 +20,17 @@ public class Application {
         System.out.println("Let's inspect the beans provided by Spring Boot:");
     }
 
-    @Bean
-    // @ConfigurationProperties("my.datasource")
-    public DataSource dataSource() {
-         return  DataSourceBuilder.create().url("jdbc:hsqldb:mem:mydb").username("sa").password("").driverClassName("org.hsqldb.jdbcDriver").build();
+//    @Bean
+//    // @ConfigurationProperties("my.datasource")
+//    public DataSource dataSource() {
+//         return  DataSourceBuilder.create().url("jdbc:hsqldb:mem:mydb").username("sa").password("").driverClassName("org.hsqldb.jdbcDriver").build();
 
 //        return new EmbeddedDatabaseBuilder().generateUniqueName(true)
 //                .setType(EmbeddedDatabaseType.HSQL).url("jdbc:hsqldb:mem:mydb").username("sa")
 //                .password("").driverClassName("org.hsqldb.jdbcDriver").build();
         // .addScript("create-customer-schema.sql")
         // .build();
-    }
+//    }
 
 
 }

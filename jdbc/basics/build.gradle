@@ -23,7 +23,7 @@ bootJar {
 
   dependencyManagement {
 	imports {
-	  mavenBom 'org.springframework.data:spring-data-releasetrain:Lovelace-BUILD-SNAPSHOT'
+	  mavenBom 'org.springframework.data:spring-data-releasetrain:Lovelace-RELEASE'
 	}
   }
   
