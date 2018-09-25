@@ -1,16 +1,18 @@
 package example.springdata.jdbc.basics;
 
-import javax.sql.DataSource;
-
 import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.jdbc.DataSourceBuilder;
+import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureJdbc;
+import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.context.ApplicationContext;
-import org.springframework.context.annotation.Bean;
-import org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseType;
+
+import example.springdata.jdbc.basics.aggregate.AggregateConfiguration;
 
 @SpringBootApplication
-// @EnableAutoConfiguration(exclude = {DataSourceAutoConfiguration.class,
+@SpringBootTest(classes = AggregateConfiguration.class)
+@EnableAutoConfiguration
+@AutoConfigureJdbc
 // DataSourceTransactionManagerAutoConfiguration.class, HibernateJpaAutoConfiguration.class})
 public class Application {
 

@@ -27,7 +27,7 @@ import java.util.List;
  *
  * @author Jens Schauder
  */
-interface LegoSetRepository extends CrudRepository<LegoSet, Integer> {
+public interface LegoSetRepository extends CrudRepository<LegoSet, Integer> {
 
 	@Query("SELECT m.name model_name, m.description, l.name set_name" +
 			"  FROM model m" +

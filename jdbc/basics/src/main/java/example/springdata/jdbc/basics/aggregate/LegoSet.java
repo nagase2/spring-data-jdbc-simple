@@ -56,7 +56,7 @@ public class LegoSet {
 	@Column(keyColumn = "name")
 	private final @AccessType(Type.FIELD) @Wither(AccessLevel.PACKAGE) Map<String, Model> models;
 
-	LegoSet() {
+	public LegoSet() {
 		this.models = new HashMap<>();
 	}
 

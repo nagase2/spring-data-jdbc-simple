@@ -42,6 +42,10 @@ bootJar {
     testCompile group: 'org.hsqldb', name: 'hsqldb', version: '2.4.0'
     compile group: 'org.springframework', name: 'spring-jdbc', version: '5.0.9.RELEASE'
     compile group: 'commons-dbcp', name: 'commons-dbcp', version: '1.4'
+    
+      def postgresqlVersion = '9.4.1212'
+      compile "org.postgresql:postgresql:${postgresqlVersion}"
+      
   }
 	repositories {	
 	  maven {

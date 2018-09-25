@@ -33,9 +33,9 @@ import org.springframework.data.relational.core.mapping.event.RelationalEvent;
  * @author Jens Schauder
  * @author Mark Paluch
  */
-@Configuration
-@EnableJdbcRepositories
-@Import(JdbcConfiguration.class)
+//@Configuration
+//@EnableJdbcRepositories
+//@Import(JdbcConfiguration.class)
 public class CategoryConfiguration {
 
 	@Bean
@@ -48,17 +48,5 @@ public class CategoryConfiguration {
 		};
 	}
 
-	@Bean
-	public ApplicationListener<BeforeSaveEvent> timeStampingSaveTime() {
-
-		return event -> {
-
-			Object entity = event.getEntity();
-
-			if (entity instanceof Category) {
-				Category category = (Category) entity;
-				category.timeStamp();
-			}
-		};
-	}
+	
 }
