@@ -15,10 +15,7 @@
  */
 package example.springdata.jdbc.basics.simpleentity;
 
-import static org.assertj.core.api.Assertions.*;
-
-import example.springdata.jdbc.basics.Output;
-import example.springdata.jdbc.basics.aggregate.AgeGroup;
+import static org.assertj.core.api.Assertions.assertThat;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -27,13 +24,19 @@ import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureJdbc;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import example.springdata.jdbc.basics.AggregateConfiguration;
+import example.springdata.jdbc.basics.Output;
+import example.springdata.jdbc.basics.aggregate.AgeGroup;
+import example.springdata.jdbc.basics.aggregate.Category;
+import example.springdata.jdbc.basics.aggregate.CategoryRepository;
+
 /**
  * Demonstrates simple CRUD operations with a simple entity without any references.
  *
  * @author Jens Schauder
  */
 @RunWith(SpringRunner.class)
-@SpringBootTest(classes = CategoryConfiguration.class)
+@SpringBootTest(classes = AggregateConfiguration.class)
 @AutoConfigureJdbc
 public class SimpleEntityTests {
 

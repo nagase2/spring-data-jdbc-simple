@@ -7,8 +7,6 @@ import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureJdbc;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.context.ApplicationContext;
 
-import example.springdata.jdbc.basics.aggregate.AggregateConfiguration;
-
 @SpringBootApplication
 @SpringBootTest(classes = AggregateConfiguration.class)
 @EnableAutoConfiguration

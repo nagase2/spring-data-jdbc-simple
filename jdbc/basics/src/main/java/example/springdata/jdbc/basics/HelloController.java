@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 import example.springdata.jdbc.basics.aggregate.LegoSet;
 import example.springdata.jdbc.basics.aggregate.LegoSetRepository;
-import example.springdata.jdbc.basics.aggregate.Manual;
 
 @RestController
 public class HelloController {

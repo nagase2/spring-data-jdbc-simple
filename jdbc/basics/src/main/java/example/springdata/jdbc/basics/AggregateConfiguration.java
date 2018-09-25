@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package example.springdata.jdbc.basics.aggregate;
+package example.springdata.jdbc.basics;
 
 import static java.util.Arrays.asList;
 
@@ -36,7 +36,9 @@ import org.springframework.data.jdbc.repository.config.JdbcConfiguration;
 import org.springframework.data.relational.core.mapping.event.BeforeSaveEvent;
 import org.springframework.lang.Nullable;
 
-import example.springdata.jdbc.basics.simpleentity.Category;
+import example.springdata.jdbc.basics.aggregate.Category;
+import example.springdata.jdbc.basics.aggregate.LegoSet;
+import example.springdata.jdbc.basics.aggregate.Manual;
 import lombok.extern.slf4j.Slf4j;
 
 /**
@@ -113,21 +115,21 @@ public class AggregateConfiguration extends JdbcConfiguration {
 	
 	
 	
-  @Autowired
-  DataSourceProperties dataSourceProperties;
-  DataSource dataSource;
-  @Bean
-  DataSource dataSource() {
-      System.out.println("★"+this.dataSourceProperties.getDriverClassName());
-      
-    DataSourceBuilder factory =
-        DataSourceBuilder.create(this.dataSourceProperties.getClassLoader())
-            .driverClassName(this.dataSourceProperties.getDriverClassName())
-            .url(this.dataSourceProperties.getUrl())
-            .username(this.dataSourceProperties.getUsername())
-            .password(this.dataSourceProperties.getPassword());
-    this.dataSource = factory.build();
-    //return new Log4jdbcProxyDataSource(this.dataSource);
-    return this.dataSource;
-  }
+//  @Autowired
+//  DataSourceProperties dataSourceProperties;
+//  DataSource dataSource;
+//  @Bean
+//  DataSource dataSource() {
+//      System.out.println("★"+this.dataSourceProperties.getDriverClassName());
+//      
+//    DataSourceBuilder factory =
+//        DataSourceBuilder.create(this.dataSourceProperties.getClassLoader())
+//            .driverClassName(this.dataSourceProperties.getDriverClassName())
+//            .url(this.dataSourceProperties.getUrl())
+//            .username(this.dataSourceProperties.getUsername())
+//            .password(this.dataSourceProperties.getPassword());
+//    this.dataSource = factory.build();
+//    //return new Log4jdbcProxyDataSource(this.dataSource);
+//    return this.dataSource;
+//  }
 }

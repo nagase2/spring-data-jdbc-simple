@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package example.springdata.jdbc.basics.simpleentity;
+package example.springdata.jdbc.basics.aggregate;
 
 import org.springframework.data.repository.CrudRepository;
 
@@ -22,4 +22,4 @@ import org.springframework.data.repository.CrudRepository;
  *
  * @author Jens Schauder
  */
-interface CategoryRepository extends CrudRepository<Category, Long> {}
+public interface CategoryRepository extends CrudRepository<Category, Long> {}

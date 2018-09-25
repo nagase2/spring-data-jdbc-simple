@@ -15,9 +15,7 @@
  */
 package example.springdata.jdbc.basics.aggregate;
 
-import static org.assertj.core.api.Assertions.*;
-
-import example.springdata.jdbc.basics.Output;
+import static org.assertj.core.api.Assertions.assertThat;
 
 import java.time.Period;
 import java.util.Arrays;
@@ -31,6 +29,9 @@ import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureJdbc;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.annotation.DirtiesContext;
 import org.springframework.test.context.junit4.SpringRunner;
+
+import example.springdata.jdbc.basics.AggregateConfiguration;
+import example.springdata.jdbc.basics.Output;
 
 /**
  * Demonstrates various possibilities to customize the behavior of a repository.
@@ -104,6 +105,7 @@ public class AggregateTests {
 		List<ModelReport> report = repository.reportModelForAge(6);
 		Output.list(report, "Model Report");
 
+	
 		assertThat(report).hasSize(7)
 				.allMatch(m -> m.getDescription() != null && m.getModelName() != null && m.getSetName() != null);
 

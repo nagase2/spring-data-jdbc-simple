@@ -16,6 +16,7 @@
 package example.springdata.jdbc.basics.aggregate;
 
 import lombok.AccessLevel;
+import lombok.Data;
 import lombok.Value;
 import lombok.experimental.Wither;
 
@@ -25,6 +26,7 @@ import lombok.experimental.Wither;
  * @author Jens Schauder
  */
 @Value
+@Data
 @Wither(AccessLevel.PACKAGE)
 public class Model {
 	String name, description;
